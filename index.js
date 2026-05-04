@@ -67,6 +67,18 @@ pauseBtn.addEventListener('click',()=> {
     startBtn.disabled = false;
   }
 });
+// リセットボタン
+const resetBtn = document.querySelector('#resetBtn');
+resetBtn.addEventListener('click',()=> {
+  if(timerID !==null) { //タイマー作動中だったら
+    clearInterval(timerID);//タイマーを止める
+    timerID = null;
+    startBtn.disabled = false;
+  }
+  result = 0;
+  renderNum.textContent = result + '秒';
+  circle.style.strokeDashoffset = 0;
+});
 
 // 円周を求める
 const circle = document.querySelector('#progressCircle');
