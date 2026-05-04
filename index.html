@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>タイマーアプリ</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>タイマーアプリ</h1>
+<div class="circleWrap">
+  <svg width="200" height="200">
+    <circle
+      id="progressCircle"
+      cx="100"
+      cy="100"
+      r="90"
+      stroke="#000"
+      stroke-width="10"
+      fill="none"
+      transform="rotate(-90 100 100)"
+    />
+  </svg>
+
+    <div class="render" id="render">
+      <span id="renderNum">0秒</span>
+    </div>
+</div>
+<!-- /.circleWrap -->
+
+
+
+    <div class="btnwrap">
+    <button class="btns" type="button" id="startBtn">スタート</button>
+    <button class="btns" type="button" id="pauseBtn">一時停止</button>
+    <button class="btns" type="button" id="plusBtn">＋５分</button>
+    <button class="btns" type="button" id="minusBtn">ー５分</button>
+    </div>
+    <!-- /.btnwrap -->
+
+    <!-- /.render -->
+  </main>
+
+</body>
+</html>
